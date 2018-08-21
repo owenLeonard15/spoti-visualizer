@@ -18,6 +18,9 @@ class App extends Component {
 
   componentDidMount = () =>{
     const accessToken = queryString.parse(window.location.search).access_token
+    if(!accessToken){
+      return
+    }
     let spotify = new Spotify()
 
     //get user's name and id
