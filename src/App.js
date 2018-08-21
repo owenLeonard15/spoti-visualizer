@@ -59,19 +59,21 @@ class App extends Component {
       { 
         this.state.user ?
           <React.Fragment>
+            {
             this.state.currentSong ?
             <div style={{display: 'flex', justifyContent: 'center', width: '100%', flexWrap: 'nowrap', flexDirection: 'row'}}>
               <img alt='cover art' id='coverArt' src={this.state.currentSong.album.images[1].url}/>
               <h1 style={{height: '40px', color: 'white', fontWeight: '600', fontSize: '3em'}} >Spotify Visualizer</h1>
             </div>
             :<h1 style={{height: '40px', color: 'white', fontWeight: '600', fontSize: '3em'}} >Spotify Visualizer</h1>
-          
+            }
+            {
             this.state.currentSong ?
                 <div style={{display: 'flex', justifyContent: 'center', flexWrap: 'nowrap', flexDirection: 'row', alignItems: 'center'}}>
                   <h2 style={{color: 'white', fontWeight: '300', margin: '0', fontSize: '1.5em'}}>{this.state.currentSong.name}&nbsp; &#8231; &nbsp; {this.state.currentSong.artists[0].name}</h2>
                 </div>
                 :<h2 style={{color: 'transparent', fontWeight: '300'}}>Click a song to play it!</h2>
-              
+            }  
             
             <div className='mainBody' style={{ margin:'0'}}>
               <SongList 
@@ -81,6 +83,7 @@ class App extends Component {
               />
               <Visualizer currentSong={this.state.currentSong} audio={this.state.audio}/>
             </div>
+            }
           </React.Fragment>
           : <button onClick={() => {
             window.location =  window.location.href.includes('localhost') 
