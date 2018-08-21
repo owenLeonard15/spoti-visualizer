@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  color: white
+}
+
+.mainBody{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+#coverArt{
+  position: absolute;
+  height: 10em;
+  top: 2em;
+  left: 2em;
+}
+
+
+@media only screen and (max-width: 1000px){
+  img{
+    visibility: hidden;
+  }
+
+  Visualizer{
+    margin: 10px;
+  }
+}
+
+
