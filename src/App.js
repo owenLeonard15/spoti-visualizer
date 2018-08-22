@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import queryString from 'query-string';
 import SongList from './SongList';
 import Visualizer from './Visualizer';
 
-import queryString from 'query-string';
 
 class App extends Component {
   constructor(){

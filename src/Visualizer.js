@@ -18,7 +18,7 @@ class Visualizer extends React.Component{
     } 
 
     componentDidMount = () => {
-        context = new AudioContext()
+        context = new AudioContext() || window.webkitAudioContext()
         context.autoplay = false
         analyser = context.createAnalyser()
         canvas = document.getElementById('canvas')
