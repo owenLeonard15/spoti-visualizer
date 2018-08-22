@@ -38,6 +38,7 @@ class App extends Component {
       })
     })
     
+    /*
     //get the names of the user's tracks
     spotify.getMySavedTracks({limit: 50})
       .then(trackData => {
@@ -47,7 +48,7 @@ class App extends Component {
           savedTracks: tracks
         })
       }, err => console.log(err))
-    
+    */
 }
 
   onSongClicked = (targetSong) => {
