@@ -83,7 +83,7 @@ class App extends Component {
                 savedTracks={this.state.savedTracks}
               />   
             </div>
-            }
+          
           </React.Fragment>
           : <button onClick={() => {
             window.location =  window.location.href.includes('localhost') 
@@ -94,8 +94,10 @@ class App extends Component {
             style={{marginTop: '40vh', fontSize: '3rem', width: '50%', borderRadius: '2em', backgroundColor: 'transparent', color: 'white', border: 'solid white 3px'}}>Sign in with spotify</button>
         }
       </div>
-    );
+    )
   }
 }
+  
+
 
 export default App;
