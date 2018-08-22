@@ -197,7 +197,7 @@ class Visualizer extends React.Component{
                                     <div className='buttons'>
                                         <button id='bars' onClick={event => this.setRenderType(event.target.id)}>Bars</button>
                                         <button id='line' onClick={event => this.setRenderType(event.target.id)} >Line</button>
-                                        <button id='circle' onClick={event => this.setRenderType(event.target.id)} >Circle</button>
+                                        <button id='circle' onClick={event => this.setRenderType(event.target.id)} >Circles</button>
                                     </div>
                                 </div>
                             }
