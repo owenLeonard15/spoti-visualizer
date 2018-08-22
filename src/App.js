@@ -43,7 +43,7 @@ class App extends Component {
     {headers: {'Authorization': 'Bearer ' + accessToken}
   }).then(response =>  response.json())
   .then(trackData => {
-    let trackObjects = trackData.alignItems
+    let trackObjects = trackData.items
     let tracks = trackObjects.map(trackObject => trackObject.track)
     this.setState({
       savedTracks: tracks })
