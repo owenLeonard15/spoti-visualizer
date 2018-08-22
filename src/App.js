@@ -17,23 +17,26 @@ class App extends Component {
   }
 
   componentDidMount = () =>{
-    const accessToken = queryString.parse(window.location.search).access_token
+    let parsed = queryString.parse(window.location.search)
+    let accessToken = parsed.access_token
     if(!accessToken){
       return
     }
     let spotify = new Spotify()
 
     //get user's name and id
-    spotify.setAccessToken(accessToken)
-    spotify.getMe()
-      .then(data => {
-        this.setState({
-          user: {
-            name: data.display_name,
-            id: data.id
-          }
-        })
-      }, err => console.error(err))
+    fetch(
+      'https://api.spotify.com/v1/me', 
+      {headers: {'Authorization': 'Bearer ' + accessToken}
+    }).then(response =>  response.json())
+    .then(data => {
+      this.setState({
+        user: {
+          name: data.display_name,
+          id: data.id
+        }
+      })
+    })
     
     //get the names of the user's tracks
     spotify.getMySavedTracks({limit: 50})
