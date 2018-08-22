@@ -91,7 +91,7 @@ class App extends Component {
               : 'https://spoti-visualizer-backend.herokuapp.com/login'
               }
             }
-            style={{padding: '20px', 'fontSize': '50px', 'marginTop': '20px'}}>Sign in with spotify</button>
+            style={{marginTop: '40vh', fontSize: '3rem', width: '50%', borderRadius: '2em', backgroundColor: 'transparent', color: 'white', border: 'solid white 3px'}}>Sign in with spotify</button>
         }
       </div>
     );
