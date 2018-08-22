@@ -4,7 +4,6 @@ import SongList from './SongList';
 import Visualizer from './Visualizer';
 
 import queryString from 'query-string';
-var Spotify = require('spotify-web-api-js');
 
 class App extends Component {
   constructor(){
