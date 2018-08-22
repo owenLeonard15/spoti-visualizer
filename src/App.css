@@ -21,7 +21,7 @@
 
 #title{
   height: 40px;
-  line-height: 2em;
+  font-size: '3em'
 }
 
 
@@ -35,7 +35,7 @@
   }
 
   #title{
-    height: 90px;
+    font-size: '1em'
   }
 }
 
