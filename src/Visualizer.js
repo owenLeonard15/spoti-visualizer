@@ -1,5 +1,7 @@
 import React from 'react';
 import './Visualizer.css';
+import webAudioTouchUnlock from 'web-audio-touch-unlock';
+
 
 let audiotag = new Audio()
 audiotag.crossOrigin = 'anonymous'
@@ -18,8 +20,23 @@ class Visualizer extends React.Component{
     } 
 
     componentDidMount = () => {
-        context = new AudioContext() || window.webkitAudioContext()
-        context.autoplay = false
+        let context = new (window.AudioContext || window.webkitAudioContext)();
+ 
+        webAudioTouchUnlock(context)
+        .then(function (unlocked) {
+            if(unlocked) {
+                // AudioContext was unlocked from an explicit user action, sound should start playing now
+            } else {
+                // There was no need for unlocking, devices other than iOS
+            }
+        }, function(reason) {
+            console.error(reason);
+        });
+            
+        // Do all your sound related stuff here 
+        // as you normally would like if the sound 
+        // was never locked
+        // ...
         analyser = context.createAnalyser()
         canvas = document.getElementById('canvas')
         ctx = canvas.getContext('2d')
