@@ -28,6 +28,10 @@
   Visualizer{
     margin: 10px;
   }
+
+  #title{
+    height: 70px;
+  }
 }
 
 
