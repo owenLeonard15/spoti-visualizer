@@ -16,7 +16,7 @@ div#mp3_player > canvas{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin: 0 0 20px 0;
 }

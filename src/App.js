@@ -81,7 +81,7 @@ class App extends Component {
                 user={this.state.user} 
                 onSongClicked={this.onSongClicked}
                 savedTracks={this.state.savedTracks}
-              />
+              />   
             </div>
             }
           </React.Fragment>
