@@ -63,9 +63,9 @@ class App extends Component {
             this.state.currentSong ?
             <div style={{display: 'flex', justifyContent: 'center', width: '100%', flexWrap: 'nowrap', flexDirection: 'row'}}>
               <img alt='cover art' id='coverArt' src={this.state.currentSong.album.images[1].url}/>
-              <h1 id='title' style={{height: '40px', color: 'white', fontWeight: '600', fontSize: '3em'}} >Spotify Visualizer</h1>
+              <h1 id='title' style={{color: 'white', fontWeight: '600', fontSize: '3em'}} >Spotify Visualizer</h1>
             </div>
-            :<h1 id='title' style={{height: '40px', color: 'white', fontWeight: '600', fontSize: '3em'}} >Spotify Visualizer</h1>
+            :<h1 id='title' style={{color: 'white', fontWeight: '600', fontSize: '3em'}} >Spotify Visualizer</h1>
             }
             {
             this.state.currentSong ?
