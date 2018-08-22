@@ -37,18 +37,19 @@ class App extends Component {
         }
       })
     })
+
+   fetch(
+    'https://api.spotify.com/v1/me/tracks', 
+    {headers: {'Authorization': 'Bearer ' + accessToken}
+  }).then(response =>  response.json())
+  .then(trackData => {
+    let trackObjects = trackData.alignItems
+    let tracks = trackObjects.map(trackObject => trackObject.track)
+    this.setState({
+      savedTracks: tracks })
+  }, err => console.log(err))
+
     
-    /*
-    //get the names of the user's tracks
-    spotify.getMySavedTracks({limit: 50})
-      .then(trackData => {
-        let trackObjects = trackData.items
-        let tracks = trackObjects.map(trackObject => trackObject.track)
-        this.setState({
-          savedTracks: tracks
-        })
-      }, err => console.log(err))
-    */
 }
 
   onSongClicked = (targetSong) => {
