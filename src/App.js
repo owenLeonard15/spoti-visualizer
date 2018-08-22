@@ -76,12 +76,12 @@ class App extends Component {
             }  
             
             <div className='mainBody' style={{ margin:'0'}}>
+            <Visualizer currentSong={this.state.currentSong} audio={this.state.audio}/>
               <SongList 
                 user={this.state.user} 
                 onSongClicked={this.onSongClicked}
                 savedTracks={this.state.savedTracks}
               />
-              <Visualizer currentSong={this.state.currentSong} audio={this.state.audio}/>
             </div>
             }
           </React.Fragment>
