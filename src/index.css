@@ -11,5 +11,7 @@ html{
 }
 
 @media only screen and (max-width: 1000px){
-  background: black;
+  html{
+    background: black;
+  }
 }
