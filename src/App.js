@@ -21,7 +21,6 @@ class App extends Component {
     if(!accessToken){
       return
     }
-    let spotify = new Spotify()
 
     //get user's name and id
     fetch(
