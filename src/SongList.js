@@ -3,7 +3,6 @@ import './SongList.css';
 
 class SongList extends React.Component{
 
-
     render(){
       let {user,savedTracks} = this.props
         return(
