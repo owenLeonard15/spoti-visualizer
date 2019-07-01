@@ -1,0 +1,77 @@
+
+div#mp3_player{
+    width: 500px;
+    height: 500px;
+    background: transparent;
+}
+
+
+div#mp3_player > canvas{
+    float: left;
+    background: transparent;
+}
+
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 0 20px 0;
+}
+
+button{
+    width: 3em;
+    height: 2em;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin: 0;
+    color: rgba(256,256,256, .8);
+    font-size: 1.4em;
+    transition: linear all .1s;
+}
+
+.fas{
+    font-size: 1.6em;
+    padding: .5em;
+    color: rgba(256,256,256, .8);
+    transition: linear all .2s;
+    margin: 0;
+}
+
+.fas:hover{
+    transform: scale(1.1);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+button:focus{
+    outline: none;
+}
+
+button.active{
+    border-bottom: 2px solid green;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px){
+    .controls{
+        justify-content: center;
+    }
+}
